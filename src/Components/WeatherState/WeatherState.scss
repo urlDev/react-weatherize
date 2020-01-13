@@ -1,0 +1,16 @@
+.weatherState {
+    display: inline-block;
+    margin: 0;
+    .weatherName {
+        display: inline-block;
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: bold;
+            font-size: 4em;
+        }
+    }
+    .weatherImg {
+        display: inline-block;
+        margin-left: 1em;
+    }
+}

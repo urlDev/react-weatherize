@@ -1,0 +1,16 @@
+.date {
+    margin: 0;
+    h1 {
+        font-size: 3em;
+        font-weight: bold;
+        span {
+            font-size: 0.5em;
+            font-weight: normal;
+        }
+    }
+    hr {
+        background: #28214D;
+        width: 40%;
+        position: absolute;
+    }
+}
