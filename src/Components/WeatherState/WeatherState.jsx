@@ -13,11 +13,12 @@ class WeatherState extends Component {
         {value => {
           return (
             <div className="weatherState">
-              <div className="weatherName" onClick={ () => {value.handleChange()}}>
+              <div className="weatherName">
                 <h1>{value.weatherName}</h1>
               </div>
               <div className="weatherImg">
-                <i className="fas fa-cloud-showers-heavy fa-4x   "></i>
+                <img src={`https://openweathermap.org/img/wn/${value.weatherImg}@2x.png`} alt={value.weatherName}></img>
+                {/* <i className="fas fa-cloud-sun fa-4x"></i> */}
               </div>
             </div>
           );

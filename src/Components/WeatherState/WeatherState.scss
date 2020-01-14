@@ -11,6 +11,10 @@
     }
     .weatherImg {
         display: inline-block;
-        margin-left: 1em;
+        img {
+            margin-top: -3em;
+            padding: 0;
+            width: 7em;
+        }
     }
 }
