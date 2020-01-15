@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { WeatherConsumer } from "../../Context";
-import { Form, Button, FormControl, Container, Row } from "react-bootstrap";
+import { Form, Button, FormControl } from "react-bootstrap";
 
 import "./Search.scss";
 
@@ -15,7 +15,7 @@ class Search extends Component {
         {value => {
           return (
             <div className="search">
-              <Form inline className="mt-3">
+              <Form inline className="mt-3" onSubmit={value.handleSubmit}>
                 <FormControl
                   onChange={value.handleChange}
                   type="text"
@@ -24,7 +24,7 @@ class Search extends Component {
                   value={value.location}
                   name="location"
                 />
-                <Button variant="outline-info" onClick={value.handleClick}  onKeyDown={value.keyPress}>
+                <Button variant="outline-info" type="submit">
                   Search
                 </Button>
               </Form>

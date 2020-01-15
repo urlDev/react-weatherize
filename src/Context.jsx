@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
-import {key} from "./apiKeys.js";
+import Unsplash, { toJson } from "unsplash-js";
+import { key, unsplashKey } from "./apiKeys.js";
 
 const WeatherContext = React.createContext();
 
@@ -20,6 +21,11 @@ const months = [
   "December"
 ];
 
+//unsplash api
+const unsplash = new Unsplash({
+  accessKey: unsplashKey
+});
+
 class WeatherProvider extends Component {
   constructor(props) {
     super(props);
@@ -29,16 +35,18 @@ class WeatherProvider extends Component {
       degree: 10,
       day: new Date().getDate(),
       month: months[d.getMonth()],
-      location: "London"
+      location: "London",
+      classNames: "",
+      thumbnail: ""
     };
   }
 
   componentDidMount() {
     this.getWeather();
+    this.getPicture();
   }
 
   getWeather = () => {
-
     axios
       .get(
         `http://api.openweathermap.org/data/2.5/weather?q=${this.state.location}&APPID=${key}&units=metric`
@@ -51,17 +59,28 @@ class WeatherProvider extends Component {
           degree: Math.floor(apiResponse.main.temp),
           location: apiResponse.name
         });
-        console.log(apiResponse.weather[0].main);
       })
       .catch(error => {
         console.log(error);
       });
   };
 
+  getPicture = () => {
+    unsplash.search
+      .photos(this.state.location, 1)
+      .then(toJson)
+      .then(json => {
+        //get an element from results array randomly
+        let result = json.results[Math.floor(Math.random()*json.results.length)];
+        this.setState({
+          thumbnail: result.urls.thumb
+        })
+      });
+
+  };
+
   // gets the value of inputs
   handleChange = e => {
-    e.preventDefault();
-
     const { value, name } = e.target;
 
     this.setState({
@@ -71,15 +90,19 @@ class WeatherProvider extends Component {
     console.log(this.state.location);
   };
 
-  keyPress(e) {
-    if (e.keyCode === 13) {
-      e.preventDefault();
-      this.getWeather();
-    }
-  }
-
-  handleClick = e => {
+  handleSubmit = e => {
+    e.preventDefault();
     this.getWeather();
+    this.getPicture();
+  };
+
+  // with onclick of button, checks if states are empty, if they are empty then adds the classname of shake(which ive put in css)
+  handleClick = () => {
+    const { classNames, firstName, email, message } = this.state;
+
+    if (firstName === "" && email === "" && message === "") {
+      this.setState({ classNames: classNames ? "" : "visible" });
+    }
   };
 
   render() {
@@ -89,9 +112,9 @@ class WeatherProvider extends Component {
         value={{
           ...this.state,
           getWeather: this.getWeather,
-          handleClick: this.handleClick,
+          handleSubmit: this.handleSubmit,
           handleChange: this.handleChange,
-          keyPress: this.keyPress
+          getPicture: this.getPicture
         }}
       >
         {this.props.children}

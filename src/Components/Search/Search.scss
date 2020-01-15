@@ -1,7 +1,7 @@
 .search {
     width: 41em;
     position: absolute;
-    top: 95%;
+    top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: "Roboto", sans-serif;
@@ -50,5 +50,40 @@
             border: 1px solid #28214D !important;
             box-shadow: none;
         }
+    }
+}
+
+.visible {
+    opacity: 0;
+    animation: visible 1s ease-in-out;
+}
+
+@keyframes shake {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.1;
+    }
+    20% {
+        opacity: 0.2;
+    }
+    30% {
+        opacity: 0.3;
+    }
+    40% {
+        opacity: 0.4;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    60% {
+        opacity: 0.6;
+    }
+    80% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
     }
 }

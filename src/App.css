@@ -10,13 +10,20 @@ font-family: 'Roboto', sans-serif; */
 
 .container {
     padding: 5em;
-    max-width: 42em;
+    max-width: 45em;
     height: 55em;
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 1em;
+}
+
+.topRight {
+    width: 20em;
+    position: absolute;
+    top: 0%;
+    left: 52%;
 }
 
 .leaf-top-Left {
@@ -47,11 +54,4 @@ font-family: 'Roboto', sans-serif; */
     /* width: 35em; */
     top: 50%;
     left: 57%;
-}
-
-.topRight {
-    width: 20em;
-    position: absolute;
-    top: 0%;
-    left: 52%;
 }

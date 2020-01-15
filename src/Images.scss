@@ -1,0 +1,29 @@
+.leaf-top-Left {
+    position: absolute;
+    width: 35em;
+    top: 15%;
+    right: 58%;
+    transform: rotate(-180deg) scaleY(-1);
+}
+
+.leaf-top-right {
+    position: absolute;
+    width: 25em;
+    top: 12%;
+    left: 60%;
+}
+
+.leaf-bottom-left {
+    position: absolute;
+    /* width: 25em; */
+    top: 50%;
+    right: 60%;
+    transform: rotate(-180deg);
+}
+
+.leaf-bottom-right {
+    position: absolute;
+    /* width: 35em; */
+    top: 50%;
+    left: 57%;
+}
