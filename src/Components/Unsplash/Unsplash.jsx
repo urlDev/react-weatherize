@@ -15,7 +15,7 @@ class Unsplash extends Component {
             {value => {
                 return (
                     <div className="unsplash">
-                        <Image  src={value.thumbnail} className="" rounded></Image>
+                        <Image  src={value.thumbnail} ></Image>
                     </div>
                 )
             }}

@@ -1,7 +1,11 @@
-.unsplash {
-    height: 12.5em;
-    img {
-        height: 100%;
-        width: 100%;
+    .unsplash {
+        margin-top: -1em;
+        height: 14em;
+        img {
+            height: 100%;
+            width: 100%;
+            border-radius: 36% 64% 35% 65% / 64% 41% 59% 36%;
+            -webkit-filter: grayscale(70%);
+            filter: grayscale(70%);
+        }
     }
-}
