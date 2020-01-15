@@ -1,11 +1,16 @@
     .unsplash {
         margin-top: -1em;
-        height: 14em;
+        height: 16em;
+        width: 17em;
+        background: rgb(165, 87, 139);
+        position: relative;
+        border-radius: 36% 64% 35% 65% / 64% 41% 59% 36%;
         img {
             height: 100%;
             width: 100%;
             border-radius: 36% 64% 35% 65% / 64% 41% 59% 36%;
             -webkit-filter: grayscale(70%);
             filter: grayscale(70%);
+            opacity: 0.5;
         }
     }

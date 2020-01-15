@@ -72,8 +72,9 @@ class WeatherProvider extends Component {
       .then(json => {
         //get an element from results array randomly
         let result = json.results[Math.floor(Math.random()*json.results.length)];
+        console.log(json.results)
         this.setState({
-          thumbnail: result.urls.thumb
+          thumbnail: result.urls.small
         })
       });
 
