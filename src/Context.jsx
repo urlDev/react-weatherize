@@ -127,19 +127,3 @@ class WeatherProvider extends Component {
 const WeatherConsumer = WeatherContext.Consumer;
 
 export { WeatherProvider, WeatherConsumer };
-
-// fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${woeid}/`)
-//                 .then(result => {
-//                     // console.log(result);
-//                     return result.json();
-//                 })
-//                 .then(data => {
-//                     // console.log(data)
-//                     const today = data.consolidated_weather[1];
-//                     console.log(`Temperatures today in ${data.title} stay between ${today.min_temp} and ${today.max_temp}.`)
-//                 })
-//                 .catch(error => console.log(error));
-// weatherName: apiResponse.list.weather.main,
-//           degree: apiResponse.list.main.temp,
-//           location: apiResponse.city.name,
-//           weatherImg: apiResponse.list.weather.icon

@@ -7,12 +7,6 @@ import Search from "./Components/Search/Search.jsx";
 import Unsplash from "./Components/Unsplash/Unsplash.jsx";
 
 import { Container, Row, Col } from "react-bootstrap";
-// import {
-//   imgTopLeft,
-//   imgTopRight,
-//   imgBottomLeft,
-//   imgBottomRight
-// } from "./Images.jsx";
 
 import "./App.css";
 
@@ -25,22 +19,22 @@ class App extends Component {
     return (
       <React.Fragment>
         <img
-          src={require("./greenLeaf.png")}
+          src={require("./Assets/greenLeaf.png")}
           alt="green leaf"
           className="leaf leaf-top-Left"
         />
         <img
-          src={require("./purpleLeaf.png")}
+          src={require("./Assets/purpleLeaf.png")}
           alt="green leaf"
           className="leaf leaf-top-right"
         />
         <img
-          src={require("./purpleLeaf.png")}
+          src={require("./Assets/purpleLeaf.png")}
           alt="green leaf"
           className="leaf leaf-bottom-left"
         />
         <img
-          src={require("./greenLeaf.png")}
+          src={require("./Assets/greenLeaf.png")}
           alt="green leaf"
           className="leaf leaf-bottom-right"
         />
