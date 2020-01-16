@@ -14,3 +14,15 @@
         position: absolute;
     }
 }
+
+@media (min-width: 200px) and (max-width:400px) {
+    .date {
+        h1 {
+            margin-bottom: 0.5em;
+        }
+        hr {
+            width: 90%;
+            margin: 0 auto;
+        }
+    }
+}

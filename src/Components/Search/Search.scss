@@ -1,8 +1,8 @@
 .search {
     width: 41em;
     position: absolute;
-    top: 90%;
-    left: 50%;
+    top: 88vh;
+    left: 50vw;
     transform: translate(-50%, -50%);
     font-family: "Roboto", sans-serif;
     border-radius: 0.5em;
@@ -85,5 +85,33 @@
     }
     100% {
         opacity: 1;
+    }
+}
+
+@media (min-width: 200px) and (max-width:767px) {
+    .search {
+        top: 89%;
+    }
+}
+
+@media (min-width: 200px) and (max-width:400px) {
+    .search {
+        top: 110vh;
+        width: 30em;
+        display: block;
+        .form-control {
+            width: 100%;
+        }
+        .btn {
+            margin-top: 1em;
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+@media (min-height: 1100px) and (max-height:1500px) {
+    .search {
+        top: 75vh;
     }
 }

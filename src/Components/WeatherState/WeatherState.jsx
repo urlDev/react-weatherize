@@ -3,10 +3,6 @@ import { WeatherConsumer } from "../../Context";
 import "./WeatherState.scss";
 
 class WeatherState extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
   render() {
     return (
       <WeatherConsumer>

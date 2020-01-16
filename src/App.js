@@ -52,7 +52,7 @@ class App extends Component {
               <Date />
               <Location />
             </Col>
-            <Col>
+            <Col className="p-0 unsplashCol">
               <Unsplash/>
             </Col>
           </Row>

@@ -4,7 +4,7 @@
     .weatherName {
         display: inline-block;
         h1 {
-            font-family: 'Playfair Display', serif;
+            font-family: "Playfair Display", serif;
             font-weight: bold;
             font-size: 4em;
         }
@@ -16,5 +16,36 @@
             padding: 0;
             width: 7em;
         }
+    }
+}
+
+.getSmaller {
+    animation: shake 1s linear;
+}
+
+@keyframes shake {
+    0% {
+        left: 0;
+    }
+    10% {
+        left: -7px;
+    }
+    20% {
+        left: 9px;
+    }
+    30% {
+        left: -11px;
+    }
+    40% {
+        left: 12px;
+    }
+    50% {
+        left: -9px;
+    }
+    60% {
+        left: 7px;
+    }
+    100% {
+        left: 0;
     }
 }

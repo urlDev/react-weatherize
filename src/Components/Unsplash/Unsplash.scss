@@ -1,10 +1,14 @@
     .unsplash {
-        margin-top: -1em;
+        margin-top: -2em;
         height: 16em;
         width: 17em;
-        background: rgb(165, 87, 139);
+        background: #60a9a6;
         position: relative;
         border-radius: 36% 64% 35% 65% / 64% 41% 59% 36%;
+        transition: all 1s ease-in-out;
+        &:hover {
+            transform: scale(1.1);
+        }
         img {
             height: 100%;
             width: 100%;
@@ -14,3 +18,15 @@
             opacity: 0.5;
         }
     }
+    
+    @media (min-width: 200px) and (max-width:400px) {
+        .unsplash {
+            border-radius: 1em;
+            margin: 0 auto;
+            img {
+                border-radius: 1em;
+            }
+        }
+    }
+    
+    //shade of blue #556fb5  pink rgb(165, 87, 139)
