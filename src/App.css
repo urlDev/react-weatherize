@@ -56,13 +56,14 @@ font-family: 'Roboto', sans-serif; */
         left: 57vw;
     }
     
-    @media (min-width: 200px) and (max-width:767px) {
+    @media (min-width: 400px) and (max-width:767px) {
         .leaf {
             display: none;
         }
         .container {
             width: 40em;
             margin: 0;
+            top: 60vh;
         }
     }
     
@@ -70,9 +71,19 @@ font-family: 'Roboto', sans-serif; */
         .App {
             text-align: center;
         }
+        .leaf {
+            display: none;
+        }
         .container {
             width: 30em;
             margin-top: 3em;
+            top: 65vh;
+        }
+    }
+    
+    @media (min-height: 700px) and (max-height:850px) {
+        .container {
+            top: 55vh;
         }
     }
     

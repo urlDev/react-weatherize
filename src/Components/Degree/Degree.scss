@@ -8,6 +8,9 @@
 
 @media (min-width: 200px) and (max-width:400px) {
     .degree {
-        min-height: 30%;
+        min-height: 20%;
+        h1 {
+            margin: 0 auto;
+        }
     }
 }

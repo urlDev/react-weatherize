@@ -90,13 +90,18 @@
 
 @media (min-width: 200px) and (max-width:767px) {
     .search {
-        top: 89%;
+        top: 10vh;
+    }
+}
+
+@media (min-width: 767.1px) and (max-width:1000px) {
+    .search {
+        top: 93vh;
     }
 }
 
 @media (min-width: 200px) and (max-width:400px) {
     .search {
-        top: 110vh;
         width: 30em;
         display: block;
         .form-control {
