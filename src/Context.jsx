@@ -49,7 +49,7 @@ class WeatherProvider extends Component {
   getWeather = () => {
     axios
       .get(
-        `http://api.openweathermap.org/data/2.5/weather?q=${this.state.location}&APPID=${OPEN_KEY}&units=metric`
+        `https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=${this.state.location}&APPID=${OPEN_KEY}&units=metric`
       )
       .then(response => {
         const apiResponse = response.data;
