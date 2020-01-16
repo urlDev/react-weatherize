@@ -59,6 +59,7 @@ class WeatherProvider extends Component {
           degree: Math.floor(apiResponse.main.temp),
           location: apiResponse.name
         });
+        console.log(apiResponse)
       })
       .catch(error => {
         console.log(error);
