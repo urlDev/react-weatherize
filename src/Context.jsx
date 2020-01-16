@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Unsplash, { toJson } from "unsplash-js";
-import { key, unsplashKey } from "./apiKeys.js";
+import { OPEN_KEY, UNSPLASH_KEY } from "./config.js";
 
 const WeatherContext = React.createContext();
 
@@ -23,7 +23,7 @@ const months = [
 
 //unsplash api
 const unsplash = new Unsplash({
-  accessKey: unsplashKey
+  accessKey: UNSPLASH_KEY
 });
 
 class WeatherProvider extends Component {
@@ -49,7 +49,7 @@ class WeatherProvider extends Component {
   getWeather = () => {
     axios
       .get(
-        `http://api.openweathermap.org/data/2.5/weather?q=${this.state.location}&APPID=${key}&units=metric`
+        `http://api.openweathermap.org/data/2.5/weather?q=${this.state.location}&APPID=${OPEN_KEY}&units=metric`
       )
       .then(response => {
         const apiResponse = response.data;
