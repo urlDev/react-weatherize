@@ -59,10 +59,9 @@ class WeatherProvider extends Component {
           degree: Math.floor(apiResponse.main.temp),
           location: apiResponse.name
         });
-        console.log(apiResponse)
       })
       .catch(error => {
-        console.log(error);
+        console.log(error.message);
       });
   };
 
@@ -76,8 +75,10 @@ class WeatherProvider extends Component {
         this.setState({
           thumbnail: result.urls.small
         })
-      });
-
+      })
+      .catch(error => {
+        console.log(error.message)
+      })
   };
 
   // gets the value of inputs
@@ -87,8 +88,6 @@ class WeatherProvider extends Component {
     this.setState({
       [name]: value
     });
-
-    console.log(this.state.location);
   };
 
   handleSubmit = e => {
